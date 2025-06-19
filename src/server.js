@@ -22,6 +22,7 @@ import organizationRoutes from './routes/organization.routes.js';
 import postRoutes from './routes/post.routes.js';
 import userRoutes from './routes/user.routes.js';
 import workflowRoutes from './routes/workflow.routes.js';
+import { config } from './config/env.config.js';
 
 // Initialize express app
 const app = express();
@@ -39,8 +40,8 @@ setupSocket(io);
 // Middleware
 app.use(cors({
 //   origin: process.env.FRONTEND_URL,
-  origin: "https://workonit-1.netlify.app",
-//   origin: "http://localhost:8080",
+//   origin: "https://workonit-1.netlify.app",
+  origin: config.frontendUrl,
   credentials: true
 }));
 app.use(helmet());

@@ -12,5 +12,6 @@ export const config = {
   mongodbUri: process.env.MONGODB_URI,
   port: process.env.PORT || 5000,
   nodeEnv: process.env.NODE_ENV || 'development',
-  jwtSecret: process.env.JWT_SECRET
+  jwtSecret: process.env.JWT_SECRET,
+  frontendUrl: process.env.FRONTEND_URL,
 };
