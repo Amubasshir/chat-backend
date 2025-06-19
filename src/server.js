@@ -38,9 +38,9 @@ setupSocket(io);
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+//   origin: process.env.FRONTEND_URL,
   origin: "https://workonit-1.netlify.app",
-  origin: "http://localhost:8080",
+//   origin: "http://localhost:8080",
   credentials: true
 }));
 app.use(helmet());
